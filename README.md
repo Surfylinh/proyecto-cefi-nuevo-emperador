@@ -31,7 +31,7 @@ Proyecto multidisciplinario/
 ├── app.py                # Servidor y rutas en Python/Flask
 └── aluminio11.glb        # Modelo 3D interactivo
 
-🛠️ Cómo Ejecutar el Proyecto Localmente
+## 🛠️ Cómo Ejecutar el Proyecto Localmente
 1. Páginas Estáticas:
 
 Puedes abrir cualquier archivo .html (index.html, History.html, etc.) directamente en tu navegador preferido.

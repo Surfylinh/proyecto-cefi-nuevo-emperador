@@ -1,0 +1,490 @@
+/* =========================================================
+GENERAL
+========================================================= */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background-color: #f5eedd;
+  color: #333;
+  font-family: "Poppins", sans-serif;
+}
+
+.calculator-page {
+  width: 90%;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 50px 0 70px;
+}
+
+/* =========================================================
+INTRODUCTION
+========================================================= */
+
+.calculator-intro {
+  background-color: #16587b;
+  color: #f5eedd;
+  text-align: center;
+  padding: 55px 30px;
+  margin-bottom: 30px;
+  border-radius: 25px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+.section-tag {
+  display: inline-block;
+  margin-bottom: 12px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.calculator-intro h2 {
+  margin: 0 0 10px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 2.7rem;
+}
+
+.calculator-intro p {
+  max-width: 750px;
+  margin: 0 auto;
+  font-size: 1.05rem;
+  line-height: 1.7;
+}
+
+/* =========================================================
+CALCULATOR CARD
+========================================================= */
+
+.calculator-card {
+  background-color: #ffffff;
+  padding: 40px;
+  margin-bottom: 30px;
+  border-radius: 22px;
+  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.07);
+}
+
+.calculator-heading {
+  display: flex;
+  align-items: flex-start;
+  gap: 18px;
+  margin-bottom: 30px;
+}
+
+.calculator-number {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 48px;
+  height: 48px;
+  background-color: #16587b;
+  color: #f5eedd;
+  border-radius: 12px;
+  font-family: "Red Hat Mono", monospace;
+  font-weight: 700;
+}
+
+.calculator-heading h2 {
+  margin: 0 0 5px;
+  color: #003366;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.7rem;
+}
+
+.calculator-heading p {
+  margin: 0;
+  color: #666;
+}
+
+/* =========================================================
+INPUTS
+========================================================= */
+
+.input-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 22px;
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.input-group label {
+  color: #003366;
+  font-weight: 700;
+}
+
+.input-group label i {
+  margin-right: 6px;
+  color: #d4af37;
+}
+
+.input-description {
+  margin: 0;
+  color: #777;
+  font-size: 0.85rem;
+  line-height: 1.5;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 13px 15px;
+  border: 2px solid #e5e5e5;
+  border-radius: 10px;
+  background-color: #fafafa;
+  color: #333;
+  font-size: 1rem;
+  font-family: inherit;
+  outline: none;
+  transition: 0.25s;
+}
+
+.input-group input:focus {
+  border-color: #16587b;
+  background-color: #ffffff;
+  box-shadow: 0 0 0 3px rgba(22, 88, 123, 0.1);
+}
+
+.input-group input::placeholder {
+  color: #aaa;
+}
+
+/* =========================================================
+CALCULATE BUTTON
+========================================================= */
+
+.calculate-button {
+  width: 100%;
+  margin-top: 25px;
+  border: none;
+  padding: 15px 25px;
+  border-radius: 12px;
+  background-color: #d4af37;
+  color: #ffffff;
+  font-family: inherit;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.calculate-button i {
+  margin-left: 8px;
+  transition: 0.3s;
+}
+
+.calculate-button:hover {
+  background-color: #16587b;
+  transform: translateY(-2px);
+}
+
+.calculate-button:hover i {
+  margin-left: 13px;
+}
+
+/* =========================================================
+ERROR
+========================================================= */
+
+.calculator-error {
+  padding: 13px 16px;
+  margin-top: 25px;
+  border-left: 4px solid #d4af37;
+  border-radius: 8px;
+  background-color: #f5eedd;
+  color: #7a4f00;
+  font-weight: 600;
+}
+
+.calculator-error i {
+  margin-right: 7px;
+}
+
+/* =========================================================
+RESULTS
+========================================================= */
+
+.results-section {
+  margin-bottom: 30px;
+}
+
+.section-heading {
+  margin-bottom: 25px;
+}
+
+.section-heading h2 {
+  margin: 0 0 7px;
+  color: #003366;
+  font-family: "Montserrat", sans-serif;
+  font-size: 2rem;
+}
+
+.section-heading p {
+  margin: 0;
+  color: #666;
+}
+
+/* =========================================================
+ELEMENT RESULT
+========================================================= */
+
+.element-result {
+  position: relative;
+  text-align: center;
+  background-color: #16587b;
+  color: #f5eedd;
+  padding: 35px 25px;
+  margin-bottom: 20px;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(22, 88, 123, 0.18);
+}
+
+.result-label {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.element-result h3 {
+  margin: 0;
+  font-family: "Montserrat", sans-serif;
+  font-size: 2.3rem;
+}
+
+.element-symbol {
+  display: inline-block;
+  margin-top: 8px;
+  font-family: "Red Hat Mono", monospace;
+  font-size: 1.2rem;
+  opacity: 0.85;
+}
+
+/* =========================================================
+BASIC RESULTS
+========================================================= */
+
+.result-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 12px;
+  margin-bottom: 30px;
+}
+
+.result-card {
+  padding: 20px 15px;
+  background-color: #ffffff;
+  border-radius: 14px;
+  text-align: center;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.06);
+}
+
+.result-card span {
+  display: block;
+  margin-bottom: 8px;
+  color: #666;
+  font-size: 0.8rem;
+}
+
+.result-card strong {
+  color: #003366;
+  font-family: "Red Hat Mono", monospace;
+  font-size: 1.35rem;
+}
+
+/* =========================================================
+BOHR MODEL RESULT
+========================================================= */
+
+.bohr-result {
+  background-color: #ffffff;
+  padding: 40px;
+  border-radius: 22px;
+  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.07);
+}
+
+.bohr-heading {
+  margin-bottom: 25px;
+}
+
+.bohr-heading h2 {
+  margin: 0 0 7px;
+  color: #003366;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.8rem;
+}
+
+.bohr-heading p {
+  margin: 0;
+  color: #666;
+}
+
+/* =========================================================
+BOHR LEVELS
+========================================================= */
+
+.bohr-levels {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 15px;
+}
+
+.bohr-level {
+  padding: 25px 15px;
+  background-color: #f5eedd;
+  border-radius: 15px;
+  text-align: center;
+  border-top: 4px solid #d4af37;
+}
+
+.level-name {
+  display: block;
+  margin-bottom: 8px;
+  color: #003366;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+.bohr-level strong {
+  display: block;
+  color: #16587b;
+  font-family: "Red Hat Mono", monospace;
+  font-size: 1.8rem;
+}
+
+.bohr-level small {
+  color: #777;
+  font-size: 0.75rem;
+}
+
+/* =========================================================
+BOHR SUMMARY
+========================================================= */
+
+.bohr-summary {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-top: 25px;
+  padding: 18px;
+  background-color: #16587b;
+  border-radius: 12px;
+  color: #f5eedd;
+}
+
+.bohr-summary span {
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.bohr-summary strong {
+  font-family: "Red Hat Mono", monospace;
+}
+
+/* =========================================================
+EXPLANATION NOTE
+========================================================= */
+
+.calculator-note {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  padding: 25px;
+  background-color: #ffffff;
+  border-left: 5px solid #d4af37;
+  border-radius: 0 15px 15px 0;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.05);
+}
+
+.calculator-note > i {
+  color: #16587b;
+  font-size: 1.8rem;
+}
+
+.calculator-note h3 {
+  margin: 0 0 7px;
+  color: #003366;
+  font-family: "Montserrat", sans-serif;
+}
+
+.calculator-note p {
+  margin: 0;
+  color: #555;
+  line-height: 1.6;
+}
+
+/* =========================================================
+RESPONSIVE
+========================================================= */
+
+@media (max-width: 850px) {
+  .result-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 700px) {
+  .calculator-page {
+    width: 94%;
+    padding-top: 25px;
+  }
+
+  .calculator-intro {
+    padding: 40px 20px;
+  }
+
+  .calculator-intro h2 {
+    font-size: 2rem;
+  }
+
+  .calculator-card,
+  .bohr-result {
+    padding: 25px;
+  }
+
+  .input-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .result-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .bohr-levels {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .bohr-summary {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  @media (max-width: 450px) {
+    .result-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .bohr-levels {
+      grid-template-columns: 1fr;
+    }
+
+    .calculator-heading {
+      gap: 12px;
+    }
+
+    .calculator-number {
+      min-width: 42px;
+      height: 42px;
+    }
+  }
+}

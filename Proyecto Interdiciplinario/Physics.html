@@ -1,0 +1,818 @@
+<!doctype html>
+
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Física || CEFI Nuevo Emperador</title>
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Red+Hat+Mono:ital,wght@0,300..700;1,300..700&family=Roboto+Flex:opsz,wght,XOPQ,XTRA,YOPQ,YTDE,YTFI,YTLC,YTUC@8..144,100..1000,96,468,79,-203,738,514,712&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    />
+    <link rel="stylesheet" href="CSS/StyleMR.css" />
+  </head>
+
+  <body>
+    <header id="encabezado">
+      <div id="logo-container">
+        <img
+          id="escudo"
+          src="img/logo.png"
+          alt="Logo de CEFI Nuevo Emperador"
+        />
+
+        <h1>
+          <span class="title-top">Centro Educativo de Formación Integral</span>
+          <span class="title-bottom">Nuevo Emperador</span>
+        </h1>
+      </div>
+
+      <nav>
+        <ul>
+          <li><a href="index.html#encabezado">Inicio</a></li>
+          <li><a href="index.html#why-cefi">Nosotros</a></li>
+          <li><a href="index.html#contact">Contacto</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- HERO -->
+
+    <section class="physics-hero">
+      <img src="img/physics-banner.jpg" alt="Physics and scientific research" />
+
+      <div class="physics-hero-overlay">
+        <span>FÍSICA</span>
+        <h1>Movimiento Rectilíneo</h1>
+        <p>Conceptos fundamentales y leyes de la cinemática</p>
+      </div>
+    </section>
+
+    <!-- FUNDAMENTOS -->
+
+    <section  id="home" class="physics-introduction hidden">
+      <div class="section-title">
+        <span>Movimiento Rectilíneo</span>
+        <h2>Fundamentos</h2>
+        <p>
+          Antes de estudiar los diferentes tipos de movimiento, necesitamos
+          comprender algunos conceptos fundamentales.
+        </p>
+      </div>
+
+      <div class="intro-text">
+        <p>
+          ¿Alguna vez te has preguntado cómo describir el movimiento de un
+          carro, una pelota o incluso una persona caminando? La
+          <strong>cinemática</strong> es la parte de la física que estudia cómo
+          se mueven los objetos, sin preocuparse todavía por las fuerzas que los
+          empujan o frenan.
+        </p>
+      </div>
+
+      <div class="concept-cards">
+        <div class="concept-card">
+          <div class="concept-icon">
+            <i class="fa-solid fa-location-dot"></i>
+          </div>
+          <h3>Posición (x)</h3>
+          <p>
+            Indica dónde se encuentra un objeto en un momento determinado. Se
+            mide normalmente en metros (m).
+          </p>
+        </div>
+
+        <div class="concept-card">
+          <div class="concept-icon"><i class="fa-solid fa-gauge-high"></i></div>
+          <h3>Velocidad (v)</h3>
+          <p>
+            Indica qué tan rápido se mueve un objeto y en qué dirección. Se mide
+            en metros por segundo (m/s).
+          </p>
+        </div>
+
+        <div class="concept-card">
+          <div class="concept-icon"><i class="fa-solid fa-bolt"></i></div>
+          <h3>Aceleración (a)</h3>
+          <p>
+            Indica qué tan rápido cambia la velocidad de un objeto. Se mide en
+            metros por segundo al cuadrado (m/s²).
+          </p>
+        </div>
+      </div>
+
+      <div class="movement-summary">
+        <h3>¿Qué aprenderemos?</h3>
+
+        <p>
+          Con estos tres conceptos podemos explicar diferentes situaciones de
+          movimiento. En esta página estudiaremos tres casos principales:
+        </p>
+
+        <div class="movement-cards">
+          <div class="movement-card">
+            <strong>MRU</strong>
+            <span>La velocidad no cambia.</span>
+          </div>
+
+          <div class="movement-card">
+            <strong>MRUA</strong>
+            <span>La velocidad cambia a un ritmo constante.</span>
+          </div>
+
+          <div class="movement-card">
+            <strong>Caída Libre</strong>
+            <span>Movimiento acelerado por la gravedad.</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SIGNOS Y UNIDADES -->
+
+    <section class="signs-section hidden" id="signos-unidades">
+      <div class="section-title">
+        <span>ANTES DE CALCULAR</span>
+        <h2>Signos y Unidades</h2>
+        <p>
+          Dos cosas que debes tener claras antes de resolver cualquier problema
+          de movimiento.
+        </p>
+      </div>
+
+      <div class="signs-grid">
+        <div class="signs-card">
+          <div class="signs-card-header">
+            <div class="signs-icon">
+              <i class="fa-solid fa-ruler"></i>
+            </div>
+
+            <div>
+              <span>01</span>
+              <h3>Unidades</h3>
+            </div>
+          </div>
+
+          <p>
+            En esta página utilizaremos principalmente el
+            <strong>Sistema Internacional de Unidades (SI)</strong>.
+          </p>
+
+          <div class="unit-list">
+            <div class="unit-item">
+              <strong>m</strong>
+              <span>metros</span>
+              <small>posición</small>
+            </div>
+
+            <div class="unit-item">
+              <strong>s</strong>
+              <span>segundos</span>
+              <small>tiempo</small>
+            </div>
+
+            <div class="unit-item">
+              <strong>m/s</strong>
+              <span>metros por segundo</span>
+              <small>velocidad</small>
+            </div>
+
+            <div class="unit-item">
+              <strong>m/s²</strong>
+              <span>metros por segundo²</span>
+              <small>aceleración</small>
+            </div>
+          </div>
+        </div>
+
+        <div class="signs-card">
+          <div class="signs-card-header">
+            <div class="signs-icon">
+              <i class="fa-solid fa-arrows-left-right"></i>
+            </div>
+
+            <div>
+              <span>02</span>
+              <h3>Signos y dirección</h3>
+            </div>
+          </div>
+
+          <p>
+            Los signos indican la <strong>dirección</strong> del movimiento.
+            Primero debes elegir qué dirección será positiva.
+          </p>
+
+          <div class="direction-example">
+            <div class="direction positive">
+              <i class="fa-solid fa-arrow-right"></i>
+
+              <div>
+                <strong>Positivo (+)</strong>
+                <span>Hacia la dirección elegida</span>
+              </div>
+            </div>
+
+            <div class="direction negative">
+              <i class="fa-solid fa-arrow-left"></i>
+
+              <div>
+                <strong>Negativo (−)</strong>
+                <span>En dirección contraria</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="sign-note">
+            <i class="fa-solid fa-circle-info"></i>
+
+            <p>
+              Un valor negativo no significa que el objeto vaya "más lento".
+              Significa que se mueve en la dirección opuesta a la que elegiste
+              como positiva.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="physics-rule">
+        <div class="rule-icon">
+          <i class="fa-solid fa-lightbulb"></i>
+        </div>
+
+        <div>
+          <span>REGLA DE ORO</span>
+          <p>
+            Antes de sustituir valores en una fórmula,
+            <strong>revisa las unidades y define la dirección positiva.</strong>
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- MRU -->
+
+    <section class="physics-topic hidden" id="mru">
+      <div class="section-heading">
+        <span class="section-tag">01 · MOVIMIENTO</span>
+        <h2>MRU</h2>
+        <p>Movimiento Rectilíneo Uniforme</p>
+      </div>
+
+      <img
+        class="img-tema"
+        src="img/mru_bus.png"
+        alt="Diagrama del MRU: bus en autopista recorriendo 80 km cada hora a velocidad constante"
+      />
+
+      <p>
+        El objeto se mueve en línea recta a velocidad constante. No acelera ni
+        frena: si vas a 80 km/h, sigues a 80 km/h todo el trayecto.
+      </p>
+
+      <p>Esto es lo que significa cada letra de la fórmula:</p>
+
+      <ul>
+        <li>
+          <b>x(t)</b> — la posición del objeto en el instante <b>t</b> (lo que
+          queremos calcular).
+        </li>
+        <li>
+          <b>x0</b> — la posición donde empezó (posición inicial). Si arranca
+          desde el punto de referencia, x0 = 0.
+        </li>
+        <li><b>v</b> — la velocidad, que no cambia en todo el recorrido.</li>
+        <li><b>t</b> — el tiempo transcurrido desde que empezó a moverse.</li>
+      </ul>
+
+      <div class="formula">x(t) = x0 + v·t</div>
+
+      <div class="ejemplo">
+        Ejemplo: un bus en autopista con velocidad fija de 80 km/h. Cada hora
+        recorre 80 km.
+      </div>
+
+      <div class="ejemplo">
+        <b>Paso a paso:</b>
+        si el bus parte del kilómetro 0 (x0 = 0) y mantiene 80 km/h (v = 80),
+        ¿dónde estará después de 2.5 horas?
+        <br /><br />
+        x(2.5) = 0 + 80 × 2.5 = <b>200 km</b> <br /><br />
+        No hace falta nada más complicado: multiplicar velocidad por tiempo y
+        sumarle el punto de partida.
+      </div>
+    </section>
+
+    <!-- MRUA -->
+
+    <section id="mrua" class="physics-topic hidden">
+      <div class="section-heading">
+        <span class="section-tag">02 · MOVIMIENTO</span>
+        <h2>MRUA</h2>
+        <p>Movimiento Rectilíneo Uniformemente Acelerado</p>
+      </div>
+
+      <img
+        class="img-tema"
+        src="img/mrua_auto.png"
+        alt="Diagrama del MRUA: carro acelerando desde el reposo a 3 m/s², con tabla y gráficos v-t y x-t"
+      />
+
+      <p>
+        La velocidad cambia de forma pareja porque la aceleración es constante.
+        "Pareja" quiere decir que en cada segundo la velocidad aumenta (o
+        disminuye) siempre la misma cantidad.
+      </p>
+
+      <p>Variables nuevas respecto al MRU:</p>
+
+      <ul>
+        <li>
+          <b>v0</b> — la velocidad inicial, con la que arranca el objeto (puede
+          ser cero, como un carro detenido).
+        </li>
+        <li>
+          <b>a</b> — la aceleración: cuánto cambia la velocidad cada segundo. Si
+          es positiva, el objeto acelera; si es negativa, frena.
+        </li>
+        <li>
+          <b>v(t)</b> — la velocidad en el instante t (distinta de la posición
+          x(t)).
+        </li>
+      </ul>
+
+      <div class="formula">
+        x(t) = x0 + v0·t + ½·a·t²<br />
+        v(t) = v0 + a·t
+      </div>
+
+      <div class="ejemplo">
+        Ejemplo: un carro que arranca en un semáforo. Cada segundo aumenta su
+        velocidad de manera uniforme.
+      </div>
+
+      <div class="ejemplo">
+        <b>Paso a paso:</b>
+        el carro arranca desde el reposo (v0 = 0) y acelera a 3 m/s². ¿Qué
+        velocidad lleva a los 4 segundos?
+        <br /><br />
+        v(4) = 0 + 3 × 4 = <b>12 m/s</b> (unos 43 km/h) <br /><br />
+        Fíjate que no importa dónde esté (x); la velocidad solo depende de
+        cuánto tiempo ha estado acelerando.
+      </div>
+
+      <p>
+        <b>Nota:</b>
+        "frenar" también es MRUA — solo que la aceleración tiene signo contrario
+        a la velocidad. Un carro que va hacia adelante y frena tiene una
+        aceleración "hacia atrás".
+      </p>
+    </section>
+
+    <!-- CAÍDA LIBRE -->
+
+    <section id="caida-libre" class="physics-topic hidden">
+      <div class="section-heading">
+        <span class="section-tag">03 · MOVIMIENTO</span>
+        <h2>Caída Libre</h2>
+      </div>
+
+      <img
+        class="img-tema"
+        src="img/caida_libre.png"
+        alt="Diagrama de la caída libre de una manzana desde un árbol, mostrando posición y velocidad en distintos instantes"
+      />
+
+      <p>
+        Un caso especial de MRUA: la aceleración siempre es la gravedad (9.8
+        m/s² hacia abajo). No es un movimiento distinto — es exactamente MRUA,
+        solo que la aceleración ya la conocemos de antemano: siempre es
+        <b>g = 9.8 m/s²</b>, y siempre apunta hacia el suelo.
+      </p>
+
+      <p>
+        Por eso la fórmula se ve casi igual que la de MRUA, solo que usamos
+        <b>y</b> en vez de <b>x</b> (porque el movimiento es vertical) y
+        reemplazamos "a" por "−g":
+      </p>
+
+      <div class="formula">
+        y(t) = y0 + v0·t − ½·g·t²<br />
+        v(t) = v0 − g·t
+      </div>
+
+      <div class="ejemplo">
+        Ejemplo: una manzana que cae de un árbol. Al principio se mueve
+        despacio, pero cada segundo cae más rápido.
+      </div>
+
+      <div class="ejemplo">
+        <b>Paso a paso:</b>
+        la manzana cae desde 5 metros de altura (y0 = 5) sin que nadie la empuje
+        (v0 = 0). ¿Cuánto le queda por caer después de 0.5 segundos?
+        <br /><br />
+        y(0.5) = 5 + 0×0.5 − ½×9.8×0.5² = 5 − 1.225 = <b>3.78 m</b> sobre el
+        suelo <br /><br />
+        Y su velocidad en ese momento:
+        <br />
+        v(0.5) = 0 − 9.8×0.5 = <b>−4.9 m/s</b>
+        (el signo negativo solo indica que va hacia abajo).
+      </div>
+
+      <p>
+        <b>¿Y si se lanza hacia arriba?</b>
+        Todo funciona igual, solo que v0 es positiva. El objeto sube, frena
+        (porque la gravedad siempre tira hacia abajo), se detiene un instante en
+        el punto más alto, y luego cae — como una pelota lanzada al aire.
+      </p>
+    </section>
+
+    <!-- CALCULADORAS -->
+
+    <section class="physics-calculator-section hidden">
+      <div class="calculator-intro">
+        <span class="section-tag">HERRAMIENTAS INTERACTIVAS</span>
+        <h2>Calculadoras de Física</h2>
+        <p>
+          Experimenta con diferentes tipos de movimiento, introduce tus propios
+          valores y observa los resultados mediante nuestras calculadoras
+          interactivas.
+        </p>
+      </div>
+
+      <div class="calculator-grid">
+        <div class="calculator-option">
+          <span class="calculator-number">01</span>
+          <h3>Movimiento Rectilíneo Uniforme</h3>
+          <p>
+            Calcula la posición de un objeto que se mueve con velocidad
+            constante.
+          </p>
+
+          <a
+            href="http://127.0.0.1:5000/mru"
+            class="calculator-button"
+            target="_blank"
+          >
+            Abrir calculadora <span>→</span>
+          </a>
+        </div>
+
+        <div class="calculator-option">
+          <span class="calculator-number">02</span>
+          <h3>Movimiento Rectilíneo Uniformemente Acelerado</h3>
+          <p>
+            Calcula la posición de un objeto considerando su velocidad inicial y
+            aceleración.
+          </p>
+
+          <a
+            href="http://127.0.0.1:5000/mrua"
+            class="calculator-button"
+            target="_blank"
+          >
+            Abrir calculadora <span>→</span>
+          </a>
+        </div>
+      
+        <div class="calculator-option">
+          <span class="calculator-number">03</span>
+          <h3>Caída Libre</h3>
+          <p> Simula el movimiento y calcula la altura y velocidad de un objeto bajo la acción de la gravedad.</p>
+
+          <a href="http://127.0.0.1:5000/caida_libre" class="calculator-button" target="_blank" >
+            Abrir calculadora <span>→</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- GRÁFICOS -->
+
+    <section id="graficos" class="physics-section hidden">
+      <div class="section-heading">
+        <span class="section-tag">INTERPRETACIÓN</span>
+        <h2>Cómo leer los gráficos</h2>
+      </div>
+
+      <p>
+        No hace falta memorizar fórmulas para leer un gráfico de movimiento —
+        basta con saber qué preguntar. Aquí va la idea general antes de los
+        detalles:
+      </p>
+
+      <ul>
+        <li>
+          La <b>inclinación de la línea</b> (lo que en física se llama
+          <b>pendiente</b>) siempre te dice "qué tan rápido cambia" lo que se
+          está graficando.
+        </li>
+        <li>
+          El <b>espacio bajo la línea</b> (el área entre la curva y el eje
+          horizontal) te dice "cuánto se acumuló" en total durante ese tiempo.
+        </li>
+      </ul>
+
+      <div class="graph-topic">
+        <h3>Gráfico posición–tiempo (x-t)</h3>
+
+        <ul>
+          <li>
+            <b>Recta</b> = velocidad constante (bus en autopista). Entre más
+            inclinada la recta, más rápido va.
+          </li>
+          <li>
+            <b>Curva</b> = la velocidad cambia (carro acelerando). Si la curva
+            se va "empinando", el objeto va cada vez más rápido; si se va
+            aplanando, va frenando.
+          </li>
+          <li>
+            <b>Línea horizontal</b> = el objeto está detenido (su posición no
+            cambia con el tiempo).
+          </li>
+        </ul>
+      </div>
+
+      <div class="graph-topic">
+        <h3>Gráfico velocidad–tiempo (v-t)</h3>
+
+        <ul>
+          <li>
+            <b>Línea horizontal</b> = velocidad fija (MRU) — no hay aceleración.
+          </li>
+          <li>
+            <b>Línea inclinada</b> = acelera o frena (MRUA). Si sube, acelera;
+            si baja, frena o cae.
+          </li>
+          <li>
+            El <b>área bajo esta línea</b> (entre la línea y el eje del tiempo)
+            es la distancia recorrida — igual que en un carro, donde velocidad ×
+            tiempo = distancia.
+          </li>
+        </ul>
+      </div>
+
+      <div class="graph-topic">
+        <h3>Gráfico aceleración–tiempo (a-t)</h3>
+
+        <ul>
+          <li><b>Línea plana en cero</b> = no hay aceleración (MRU).</li>
+          <li>
+            <b>Línea plana en otro valor</b> = aceleración constante (MRUA o
+            gravedad en caída libre).
+          </li>
+          <li>
+            Casi nunca vas a ver una curva aquí en estos tres movimientos,
+            porque en los tres la aceleración no cambia con el tiempo — es
+            plana, arriba, en cero o abajo del eje.
+          </li>
+        </ul>
+      </div>
+
+      <div class="ejemplo">
+        <b
+          >Truco rápido para identificar el movimiento con solo mirar el gráfico
+          x-t:</b
+        >
+        si es una línea recta, es MRU. Si es una curva, es MRUA o caída libre.
+      </div>
+    </section>
+
+    <!-- TABLA COMPARATIVA -->
+
+    <section id="comparacion" class="physics-section hidden">
+      <div class="section-heading">
+        <span class="section-tag">COMPARACIÓN</span>
+        <h2>Tabla comparativa</h2>
+      </div>
+
+      <div class="table-container">
+        <table>
+          <thead>
+            <tr>
+              <th>Movimiento</th>
+              <th>Aceleración</th>
+              <th>Fórmula de posición</th>
+              <th>Ejemplo cotidiano</th>
+            </tr>
+          </thead>
+
+          <tbody>
+            <tr>
+              <td>MRU</td>
+              <td>a = 0</td>
+              <td>x = x0 + v·t</td>
+              <td>Bus en autopista</td>
+            </tr>
+
+            <tr>
+              <td>MRUA</td>
+              <td>a = constante</td>
+              <td>x = x0 + v0·t + ½at²</td>
+              <td>Carro que arranca o frena</td>
+            </tr>
+
+            <tr>
+              <td>Caída libre</td>
+              <td>a = −9.8 m/s²</td>
+              <td>y = y0 + v0·t − ½gt²</td>
+              <td>Manzana que cae de un árbol</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- ERRORES COMUNES -->
+
+    <section id="errores" class="physics-section hidden">
+      <div class="section-heading">
+        <span class="section-tag">PARA RECORDAR</span>
+        <h2>Errores comunes</h2>
+      </div>
+
+      <ul class="common-mistakes">
+        <li>
+          <b>Confundir posición con distancia recorrida.</b>
+          La posición te dice "dónde está" el objeto; la distancia recorrida te
+          dice "cuánto caminó" en total. Si vas y vuelves al mismo punto, tu
+          posición final es la misma que la inicial, pero sí recorriste
+          distancia.
+        </li>
+
+        <li>
+          <b
+            >Pensar que una curva hacia abajo significa "velocidad negativa".</b
+          >
+          En el gráfico de posición, una curva que baja solo significa que el
+          objeto se está moviendo hacia el lado que definimos como negativo — no
+          que algo ande "mal" o "al revés".
+        </li>
+
+        <li>
+          <b>Creer que velocidad cero significa que nunca se movió.</b>
+          Un objeto puede tener velocidad cero en un instante puntual (por
+          ejemplo, en el punto más alto de un lanzamiento) y haber estado
+          moviéndose todo el resto del tiempo.
+        </li>
+
+        <li>
+          <b>Mezclar rapidez con velocidad.</b>
+          La rapidez es solo el número (qué tan "rápido"); la velocidad incluye
+          además la dirección. Por eso la velocidad puede ser negativa, pero la
+          rapidez nunca.
+        </li>
+
+        <li>
+          <b>Olvidar las unidades.</b>
+          Una aceleración de "3" no significa nada sin unidades — 3 m/s² es muy
+          distinto a 3 km/h². Siempre verifica que todos los datos estén en las
+          mismas unidades antes de calcular.
+        </li>
+      </ul>
+    </section>
+
+    <!-- GLOSARIO -->
+
+    <section id="glosario" class="physics-section hidden">
+      <div class="section-heading">
+        <span class="section-tag">CONCEPTOS CLAVE</span>
+        <h2>Glosario rápido</h2>
+      </div>
+
+      <div class="table-container">
+        <table>
+          <thead>
+            <tr>
+              <th>Término</th>
+              <th>Qué significa</th>
+            </tr>
+          </thead>
+
+          <tbody>
+            <tr>
+              <td>Posición (x)</td>
+              <td>
+                El lugar donde está el objeto respecto a un punto de referencia.
+              </td>
+            </tr>
+
+            <tr>
+              <td>Desplazamiento</td>
+              <td>
+                La diferencia entre la posición final y la inicial. No es lo
+                mismo que la distancia recorrida.
+              </td>
+            </tr>
+
+            <tr>
+              <td>Velocidad (v)</td>
+              <td>
+                Qué tan rápido cambia la posición, incluyendo la dirección (por
+                eso puede ser negativa).
+              </td>
+            </tr>
+
+            <tr>
+              <td>Rapidez</td>
+              <td>
+                Lo mismo que la velocidad, pero sin importar la dirección —
+                siempre es un número positivo.
+              </td>
+            </tr>
+
+            <tr>
+              <td>Aceleración (a)</td>
+              <td>
+                Qué tan rápido cambia la velocidad. Puede hacer que el objeto
+                vaya más rápido o que frene.
+              </td>
+            </tr>
+
+            <tr>
+              <td>Pendiente</td>
+              <td>
+                Qué tan inclinada está una línea en un gráfico; indica qué tan
+                rápido cambia lo que se está graficando.
+              </td>
+            </tr>
+
+            <tr>
+              <td>Área bajo la curva</td>
+              <td>
+                El espacio entre la línea del gráfico y el eje horizontal; en un
+                gráfico v-t, esa área es la distancia recorrida.
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+
+    <footer id="footer" class="footer hidden">
+      <div class="footer-container">
+        <div class="footer-column">
+          <img src="img/logo.png" alt="CEFI Logo" class="footer-logo" />
+
+          <h3>CEFI Nuevo Emperador</h3>
+
+          <p>
+            El Centro Educativo de Formación Integral Nuevo Emperador se dedica
+            a proporcionar una educación de calidad y formar líderes para el
+            futuro.
+          </p>
+
+          <p class="footer-motto">
+            <strong>"Estudio, Disciplina y Trabajo"</strong>
+          </p>
+        </div>
+
+        <div class="footer-column">
+          <h3>Links Rápidos</h3>
+
+          <ul>
+            <li><a href="index.html#encabezado">Inicio</a></li>
+            <li><a href="index.html#why-cefi">Nosotros</a></li>
+            <li><a href="index.html#contact">Contacto</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-column">
+          <h3>Contacto</h3>
+
+          <p>
+            <i class="fa-solid fa-map-marker-alt"></i> Nuevo Emperador, Panamá
+            Oeste
+          </p>
+          <p><i class="fa-solid fa-phone"></i> +507 XXX-XXXX</p>
+          <p><i class="fa-solid fa-envelope"></i> info@school.edu.pa</p>
+        </div>
+
+        <div class="footer-column">
+          <h3>Siguenos</h3>
+
+          <a href="#"><i class="fa-brands fa-facebook-f"></i> Facebook</a><br />
+          <a href="https://www.instagram.com/cefine2025oficial/"
+            ><i class="fa-brands fa-instagram"></i> Instagram</a
+          ><br />
+          <a href="#"><i class="fa-brands fa-youtube"></i> YouTube</a>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>
+          © 2026 Centro Educativo de Formación Integral Nuevo Emperador. Todos
+          los derechos reservados.
+        </p>
+      </div>
+    </footer>
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+  </body>
+</html>

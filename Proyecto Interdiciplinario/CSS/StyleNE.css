@@ -1,0 +1,1342 @@
+/* =========================================================
+GLOBAL / RESET
+========================================================= */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* =========================================================
+TYPOGRAPHY & BODY
+========================================================= */
+
+h1,
+h2,
+h3 {
+  font-family: "Montserrat", sans-serif;
+}
+
+body,
+nav,
+p {
+  font-family: "Poppins", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background-color: #f5eedd;
+}
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+header#encabezado {
+    background: #16587b;
+    color: #f5eedd;
+    border-bottom: 5px solid #d4af37;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    width: 100%;
+    min-height: 120px;
+
+    padding: 15px 50px;
+
+    position: relative;
+    z-index: 1000;
+}
+
+#logo-container {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+#logo-container h1 {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.2;
+    margin: 0;
+}
+
+#escudo {
+    width: 80px;
+    height: auto;
+}
+
+.title-top {
+    font-size: 1.15rem;
+    font-weight: 600;
+}
+
+.title-bottom {
+    font-size: 1.8rem;
+    font-weight: 700;
+}
+
+#encabezado nav ul {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+    margin: 0;
+    padding: 0;
+}
+
+#encabezado nav a {
+    color: #f5eedd;
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+#encabezado nav a:hover {
+    color: #d4af37;
+}
+
+/* =========================================================
+GENERAL ANIMATIONS
+========================================================= */
+
+.hidden {
+  opacity: 0;
+  transform: translateY(60px);
+
+  transition:
+    opacity 0.8s ease,
+    transform 0.8s ease;
+}
+
+.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* =========================================================
+ICONS
+========================================================= */
+
+.icon {
+  font-size: 3rem;
+  color: #16587b;
+  margin-bottom: 20px;
+}
+
+.highlight i {
+  font-size: 1.7rem;
+  color: #16587b;
+  width: 35px;
+}
+
+.contact-item i {
+  color: #16587b;
+  margin-right: 10px;
+  font-size: 1.1rem;
+}
+
+.footer-column i {
+  width: 25px;
+  color: #d4af37;
+}
+
+/* =========================================================
+   HISTORY HERO
+========================================================= */
+
+.hero {
+    position: relative;
+    width: 100%;
+    height: 500px;
+    overflow: hidden;
+}
+
+.hero img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* Dark overlay */
+
+.hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.45);
+}
+
+/* Hero text */
+
+.hero-overlay {
+    position: absolute;
+    top: 50%;
+    right: 8%;
+    transform: translateY(-50%);
+    text-align: right;
+
+    max-width: 650px;
+
+    color: #f5eedd;
+
+    z-index: 2;
+}
+
+.hero-overlay span {
+    font-family: "Montserrat", sans-serif;
+    font-size: 0.9rem;
+    font-weight: 600;
+    letter-spacing: 3px;
+}
+
+.hero-overlay h2 {
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    margin: 15px 0 20px;
+}
+
+.hero-overlay p {
+    font-size: 1.3rem;
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* =========================================================
+   HISTORY INTRODUCTION
+========================================================= */
+
+.history-intro {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 90px 50px;
+}
+
+/* Section heading */
+
+.history-intro .section-heading {
+    margin-bottom: 45px;
+}
+
+.section-tag {
+    display: block;
+
+    font-family: "Red Hat Mono", monospace;
+    font-size: 0.85rem;
+    font-weight: 600;
+    letter-spacing: 2px;
+
+    color: #16587b;
+
+    margin-bottom: 12px;
+}
+
+.history-intro .section-heading h2 {
+    margin: 0 0 15px;
+
+    color: #003366;
+
+    font-size: 2.5rem;
+}
+
+.history-intro .section-heading p {
+    max-width: 700px;
+
+    margin: 0;
+
+    color: #666;
+
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+/* History text */
+
+.history-content {
+    background: #f5eedd;
+
+    padding: 40px 45px;
+
+    border-left: 5px solid #d4af37;
+
+    border-radius: 0 18px 18px 0;
+
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.06);
+}
+
+.history-content p {
+    margin: 0 0 22px;
+
+    color: #444;
+
+    font-size: 1.05rem;
+    line-height: 1.8;
+}
+
+.history-content p:last-child {
+    margin-bottom: 0;
+}
+
+/* =========================================================
+   HISTORICAL JOURNEY
+========================================================= */
+
+.historical-journey {
+    padding: 110px 60px;
+
+    background: #f5eedd;
+}
+
+
+/* =========================================================
+   JOURNEY HEADER
+========================================================= */
+
+.journey-header {
+    max-width: 850px;
+    margin: 0 auto 90px;
+
+    text-align: center;
+}
+
+.journey-header h2 {
+    margin: 10px 0 20px;
+
+    color: #003366;
+
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    line-height: 1.1;
+}
+
+.journey-header p {
+    max-width: 700px;
+    margin: 0 auto;
+
+    color: #555;
+
+    font-size: 1.05rem;
+    line-height: 1.8;
+}
+
+/* =========================================================
+   HISTORICAL JOURNEY — TIMELINE
+========================================================= */
+
+.seccion-tiempo {
+    padding: 100px 8%;
+    background: #f5eedd;
+}
+
+
+/* =========================================================
+   TIMELINE HEADER
+========================================================= */
+
+.timeline-header {
+    max-width: 750px;
+    margin: 0 auto 80px;
+    text-align: center;
+}
+
+.timeline-header .section-tag {
+    display: inline-block;
+
+    margin-bottom: 15px;
+
+    font-size: 0.85rem;
+    font-weight: 600;
+    letter-spacing: 2px;
+
+    color: #d4af37;
+}
+
+.timeline-header h2 {
+    margin: 0 0 20px;
+
+    font-size: 2.8rem;
+
+    color: #003366;
+}
+
+.timeline-header p {
+    margin: 0;
+
+    font-size: 1.05rem;
+    line-height: 1.7;
+
+    color: #555;
+}
+
+
+/* =========================================================
+   TIMELINE CONTAINER
+========================================================= */
+
+.timeline {
+    position: relative;
+
+    max-width: 1200px;
+
+    margin: 0 auto;
+}
+
+
+/* Central line */
+
+.timeline::before {
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    bottom: 0;
+    left: 50%;
+
+    width: 3px;
+
+    background: #d4af37;
+
+    transform: translateX(-50%);
+}
+/* =========================================================
+   1910 · ORIGIN
+========================================================= */
+
+.timeline-origin {
+    position: relative;
+
+    width: 100%;
+
+    margin: 0 0 100px;
+    padding: 0 0 60px;
+
+    text-align: center;
+}
+
+
+/* Special 1910 point */
+
+.timeline-origin .timeline-point {
+    position: relative;
+
+    top: auto;
+    right: auto;
+    left: auto;
+
+    width: 85px;
+    height: 85px;
+
+    margin: 0 auto 35px;
+
+    border: 6px solid #f5eedd;
+    border-radius: 50%;
+
+    background: #d4af37;
+
+    color: #003366;
+
+    font-size: 1rem;
+
+    box-shadow: 0 6px 18px rgba(212, 175, 55, 0.25);
+
+    z-index: 3;
+}
+
+
+/* Full-width origin card */
+
+.timeline-origin .timeline-card {
+    width: 100%;
+    box-sizing: border-box;
+
+    padding: 50px 70px;
+
+    border: 2px solid rgba(212, 175, 55, 0.35);
+    border-radius: 22px;
+
+    background: #ffffff;
+
+    text-align: left;
+
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.07);
+}
+
+
+/* Gold accent */
+
+.timeline-origin .timeline-card::before {
+    width: 8px;
+
+    background: #d4af37;
+
+    border-radius: 22px 0 0 22px;
+}
+
+
+/* Origin heading */
+
+.timeline-origin .timeline-card h3 {
+    margin-bottom: 20px;
+
+    color: #003366;
+
+    font-size: 2.2rem;
+}
+
+
+/* Origin text */
+
+.timeline-origin .timeline-card p {
+    max-width: 950px;
+
+    font-size: 1.05rem;
+    line-height: 1.85;
+}
+
+/* =========================================================
+   HISTORY TRANSITION
+========================================================= */
+
+.history-transition {
+    max-width: 850px;
+
+    margin: 50px auto 0;
+
+    padding: 55px 60px;
+
+    text-align: center;
+
+    background: #16587b;
+
+    border-radius: 22px;
+
+    box-shadow: 0 12px 30px rgba(22, 88, 123, 0.15);
+}
+
+.history-transition .section-tag {
+    color: #d4af37;
+}
+
+.history-transition h3 {
+    margin: 15px auto;
+
+    color: #f5eedd;
+
+    font-size: clamp(1.6rem, 3vw, 2.3rem);
+    line-height: 1.25;
+}
+
+.history-transition p {
+    max-width: 650px;
+
+    margin: 0 auto;
+
+    color: rgba(245, 238, 221, 0.9);
+
+    line-height: 1.7;
+}
+
+/* =========================================================
+   NORMAL TIMELINE EVENTS
+========================================================= */
+
+.timeline-item {
+    position: relative;
+
+    display: grid;
+
+    grid-template-columns: 1fr 90px 1fr;
+
+    align-items: center;
+
+    gap: 35px;
+
+    margin-bottom: 80px;
+
+    z-index: 1;
+}
+
+
+/* =========================================================
+   TIMELINE IMAGE
+========================================================= */
+
+.timeline-image {
+    width: 100%;
+}
+
+.timeline-image img {
+    display: block;
+
+    width: 100%;
+    height: 240px;
+
+    object-fit: cover;
+
+    border-radius: 20px;
+
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.10);
+}
+
+
+/* =========================================================
+   TIMELINE POINT
+========================================================= */
+
+.timeline-point {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    width: 58px;
+    height: 58px;
+
+    margin: 0 auto;
+
+    background: #16587b;
+
+    border: 5px solid #f5eedd;
+
+    border-radius: 50%;
+
+    color: #f5eedd;
+
+    font-family: "Montserrat", sans-serif;
+
+    font-size: 0.9rem;
+    font-weight: 700;
+
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.12);
+
+    z-index: 3;
+}
+
+
+/* =========================================================
+   TIMELINE CONTENT CARD
+========================================================= */
+
+.timeline-card {
+    padding: 35px;
+
+    background: #ffffff;
+
+    border-radius: 20px;
+
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.07);
+}
+
+.timeline-card .timeline-label {
+    display: inline-block;
+
+    margin-bottom: 10px;
+
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+
+    color: #d4af37;
+}
+
+.timeline-card h3 {
+    margin: 0 0 15px;
+
+    font-size: 1.7rem;
+
+    color: #003366;
+}
+
+.timeline-card p {
+    margin: 10px 0;
+
+    line-height: 1.7;
+
+    color: #555;
+}
+
+
+/* =========================================================
+   ALTERNATING SIDES
+========================================================= */
+
+/* Even events switch image and text */
+
+.timeline-item:nth-child(even) {
+    direction: rtl;
+}
+
+.timeline-item:nth-child(even) > * {
+    direction: ltr;
+}
+
+
+/* =========================================================
+   HOVER EFFECT
+========================================================= */
+
+.timeline-image img,
+.timeline-card {
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.timeline-image img:hover {
+    transform: translateY(-5px);
+
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.14);
+}
+
+.timeline-card:hover {
+    transform: translateY(-3px);
+
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.10);
+}
+
+
+/* =========================================================
+   HISTORY TRANSITION
+========================================================= */
+
+.history-transition {
+    max-width: 850px;
+
+    margin: 50px auto 0;
+
+    padding: 55px 60px;
+
+    text-align: center;
+
+    background: #16587b;
+
+    border-radius: 22px;
+
+    box-shadow: 0 12px 30px rgba(22, 88, 123, 0.15);
+}
+
+.history-transition .section-tag {
+    color: #d4af37;
+}
+
+.history-transition h3 {
+    margin: 15px auto;
+
+    color: #f5eedd;
+
+    font-size: clamp(1.6rem, 3vw, 2.3rem);
+    line-height: 1.25;
+}
+
+.history-transition p {
+    max-width: 650px;
+
+    margin: 0 auto;
+
+    color: rgba(245, 238, 221, 0.9);
+
+    line-height: 1.7;
+}
+
+/* =========================================================
+   HISTORY INTRO
+========================================================= */
+
+.history-intro {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 100px 60px;
+}
+
+/* Heading */
+
+.history-heading {
+    max-width: 850px;
+    margin-bottom: 70px;
+}
+
+.section-tag {
+    display: block;
+    margin-bottom: 15px;
+
+    font-family: "Montserrat", sans-serif;
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+
+    color: #16587b;
+}
+
+.history-heading h2 {
+    margin: 0;
+
+    font-family: "Montserrat", sans-serif;
+    font-size: clamp(2.3rem, 5vw, 4rem);
+    line-height: 1.1;
+
+    color: #003366;
+}
+
+/* Story layout */
+
+.history-story {
+    display: grid;
+    grid-template-columns: 0.8fr 1.5fr;
+    gap: 80px;
+    align-items: start;
+}
+
+/* Left side */
+
+.history-side {
+    position: sticky;
+    top: 120px;
+}
+
+.history-number {
+    font-family: "Montserrat", sans-serif;
+    font-size: 5rem;
+    font-weight: 800;
+    line-height: 1;
+
+    color: #d4af37;
+}
+
+.history-side h3 {
+    max-width: 300px;
+    margin: 20px 0;
+
+    font-size: 2rem;
+    line-height: 1.15;
+
+    color: #003366;
+}
+
+.history-line {
+    width: 60px;
+    height: 4px;
+
+    margin: 25px 0;
+
+    background: #16587b;
+}
+
+.history-side p {
+    max-width: 300px;
+
+    color: #666;
+    line-height: 1.7;
+}
+
+/* Main story */
+
+.history-text {
+    font-size: 1.05rem;
+    line-height: 1.85;
+    color: #444;
+}
+
+.history-text p {
+    margin: 0 0 30px;
+}
+
+/* Highlight */
+
+.history-highlight {
+    margin: 45px 0;
+    padding: 30px 35px;
+
+    background: #16587b;
+
+    border-radius: 16px;
+
+    color: #f5eedd;
+}
+
+.history-highlight span {
+    display: block;
+
+    margin-bottom: 10px;
+
+    font-family: "Montserrat", sans-serif;
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.history-highlight p {
+    margin: 0;
+
+    font-size: 1.15rem;
+    line-height: 1.7;
+    color: #f5eedd;
+}
+
+/* =========================================================
+   HISTORY · EVOLUTION
+========================================================= */
+
+.history-evolution {
+    padding: 100px 60px;
+
+    background: #f5eedd;
+}
+
+.evolution-heading {
+    max-width: 1100px;
+    margin: 0 auto 70px;
+}
+
+.evolution-heading h2 {
+    margin: 0 0 15px;
+
+    color: #003366;
+    font-size: clamp(2.3rem, 5vw, 4rem);
+    line-height: 1.1;
+}
+
+.evolution-heading p {
+    max-width: 650px;
+
+    margin: 0;
+
+    color: #666;
+    font-size: 1.1rem;
+    line-height: 1.7;
+}
+
+
+/* Main content */
+
+.evolution-content {
+    max-width: 1100px;
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: 0.6fr 1.4fr;
+    gap: 70px;
+
+    align-items: start;
+}
+
+.evolution-date {
+    border-top: 4px solid #d4af37;
+
+    padding-top: 20px;
+}
+
+.evolution-date span {
+    display: block;
+
+    font-family: "Montserrat", sans-serif;
+    font-size: 4rem;
+    font-weight: 800;
+
+    color: #16587b;
+    line-height: 1;
+}
+
+.evolution-date strong {
+    display: block;
+
+    margin-top: 10px;
+
+    font-family: "Montserrat", sans-serif;
+    font-size: 1.4rem;
+
+    color: #003366;
+}
+
+.evolution-text {
+    color: #444;
+    font-size: 1.05rem;
+    line-height: 1.85;
+}
+
+.evolution-text p {
+    margin: 0 0 25px;
+}
+
+
+/* =========================================================
+   OPENING HIGHLIGHT
+========================================================= */
+
+.opening-highlight {
+    max-width: 1100px;
+    margin: 80px auto 0;
+
+    display: grid;
+    grid-template-columns: 130px 1fr;
+    gap: 40px;
+
+    align-items: center;
+
+    padding: 45px;
+
+    background: #16587b;
+    border-radius: 20px;
+
+    color: #f5eedd;
+}
+
+.opening-date {
+    font-family: "Montserrat", sans-serif;
+    font-size: 4rem;
+    font-weight: 800;
+
+    line-height: 0.8;
+    text-align: center;
+
+    color: #d4af37;
+}
+
+.opening-date span {
+    display: block;
+
+    margin-top: 12px;
+
+    font-size: 1rem;
+    letter-spacing: 3px;
+}
+
+.opening-highlight .section-tag {
+    margin-bottom: 10px;
+    color: #d4af37;
+}
+
+.opening-highlight h3 {
+    margin: 0 0 15px;
+
+    color: #f5eedd;
+    font-size: 1.8rem;
+}
+
+.opening-highlight p {
+    margin: 0;
+
+    color: #f5eedd;
+    line-height: 1.7;
+}
+
+/* =========================================================
+   HISTORY · IDENTITY
+========================================================= */
+
+.history-identity {
+    max-width: 1200px;
+    margin: 0 auto;
+
+    padding: 110px 60px;
+}
+
+
+/* Heading */
+
+.identity-heading {
+    max-width: 800px;
+    margin-bottom: 70px;
+}
+
+.identity-heading h2 {
+    margin: 0 0 20px;
+
+    color: #003366;
+
+    font-size: clamp(2.3rem, 5vw, 4rem);
+    line-height: 1.1;
+}
+
+.identity-heading p {
+    max-width: 650px;
+
+    margin: 0;
+
+    color: #666;
+
+    font-size: 1.1rem;
+    line-height: 1.7;
+}
+
+
+/* =========================================================
+   IDENTITY BLOCKS
+========================================================= */
+
+.identity-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    gap: 35px;
+}
+
+.identity-block {
+    padding: 40px;
+
+    border-top: 4px solid #16587b;
+
+    background: #ffffff;
+
+    border-radius: 0 0 18px 18px;
+
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.06);
+}
+
+.identity-number {
+    display: block;
+
+    margin-bottom: 25px;
+
+    font-family: "Montserrat", sans-serif;
+    font-size: 3rem;
+    font-weight: 800;
+
+    color: #d4af37;
+}
+
+.identity-block h3 {
+    margin: 0 0 20px;
+
+    color: #003366;
+
+    font-size: 1.7rem;
+}
+
+.identity-block p {
+    margin: 0 0 20px;
+
+    color: #444;
+
+    line-height: 1.8;
+}
+
+.identity-block p:last-child {
+    margin-bottom: 0;
+}
+
+/* =========================================================
+   HISTORY · PRESENT
+========================================================= */
+
+.history-present {
+    padding: 110px 60px;
+
+    background: #f5eedd;
+}
+
+.present-heading {
+    max-width: 1150px;
+    margin: 0 auto 70px;
+}
+
+.present-heading h2 {
+    max-width: 750px;
+
+    margin: 0 0 20px;
+
+    color: #003366;
+
+    font-size: clamp(2.3rem, 5vw, 4rem);
+    line-height: 1.1;
+}
+
+.present-heading p {
+    max-width: 650px;
+
+    margin: 0;
+
+    color: #666;
+
+    font-size: 1.1rem;
+    line-height: 1.7;
+}
+
+
+/* =========================================================
+   PRESENT CONTENT
+========================================================= */
+
+.present-layout {
+    max-width: 1150px;
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: 0.7fr 1.3fr;
+
+    gap: 80px;
+}
+
+
+/* Year */
+
+.present-year {
+    border-top: 5px solid #d4af37;
+
+    padding-top: 25px;
+}
+
+.present-year span {
+    display: block;
+
+    font-family: "Montserrat", sans-serif;
+    font-size: clamp(4rem, 8vw, 7rem);
+    font-weight: 800;
+    line-height: 0.9;
+
+    color: #16587b;
+}
+
+.present-year p {
+    max-width: 250px;
+
+    margin-top: 20px;
+
+    font-family: "Montserrat", sans-serif;
+    font-weight: 600;
+
+    color: #003366;
+}
+
+
+/* Text */
+
+.present-text {
+    color: #444;
+
+    font-size: 1.05rem;
+    line-height: 1.85;
+}
+
+.present-text p {
+    margin: 0 0 25px;
+}
+
+
+/* =========================================================
+   COMMUNITY BLOCK
+========================================================= */
+
+.present-bottom {
+    max-width: 1150px;
+    margin: 75px auto 0;
+
+    display: grid;
+    grid-template-columns: 80px 1fr;
+
+    gap: 25px;
+
+    align-items: center;
+
+    padding: 35px 40px;
+
+    background: #ffffff;
+
+    border-radius: 18px;
+
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.06);
+}
+
+.present-icon {
+    width: 65px;
+    height: 65px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: #16587b;
+
+    color: #f5eedd;
+
+    font-size: 1.5rem;
+}
+
+.present-bottom h3 {
+    margin: 0 0 8px;
+
+    color: #003366;
+
+    font-size: 1.4rem;
+}
+
+.present-bottom p {
+    margin: 0;
+
+    color: #555;
+
+    line-height: 1.7;
+}
+
+
+/* =========================================================
+FOOTER
+========================================================= */
+
+.footer {
+  background: #16587b;
+  color: #f5eedd;
+  border-top: 5px solid #d4af37;
+}
+
+.footer-container {
+  width: 90%;
+  max-width: 1300px;
+  margin: auto;
+  padding: 60px 0;
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  gap: 50px;
+}
+
+.footer-column h3 {
+  margin-bottom: 20px;
+  color: #ffffff;
+}
+
+.footer-column p {
+  line-height: 1.8;
+  margin-bottom: 10px;
+}
+
+.footer-column ul {
+  list-style: none;
+}
+
+.footer-column ul li {
+  margin-bottom: 12px;
+}
+
+.footer-column a {
+  color: #f5eedd;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.footer-column a:hover {
+  color: #48b3ce;
+}
+
+.footer-logo {
+  width: 80px;
+  margin-bottom: 20px;
+}
+
+.footer-motto {
+  margin-top: 20px;
+  font-style: italic;
+}
+
+.footer-bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  text-align: center;
+  padding: 20px;
+  font-size: 0.9rem;
+}

@@ -1,0 +1,271 @@
+<!doctype html>
+
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Calculadora de Estructura Atómica │ CEFI Nuevo Emperador</title>
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Red+Hat+Mono:ital,wght@0,300..700;1,300..700&family=Roboto+Flex:opsz,wght,XOPQ,XTRA,YOPQ,YTDE,YTFI,YTLC,YTUC@8..144,100..1000,96,468,79,-203,738,514,712&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    />
+
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='quimica.css') }}"
+    />
+  </head>
+
+  <body>
+    <!-- =====================================================
+     MAIN
+====================================================== -->
+
+    <main class="calculator-page">
+      <!-- =================================================
+         INTRODUCTION
+    ================================================== -->
+
+      <section class="calculator-intro">
+        <span class="section-tag"> QUÍMICA · ESTRUCTURA ATÓMICA </span>
+
+        <h2>Calculadora de Estructura Atómica</h2>
+
+        <p>
+          Introduce la cantidad de protones y neutrones de un átomo para
+          calcular su número atómico, número de masa, cantidad de electrones y
+          distribución electrónica según el modelo de Bohr.
+        </p>
+      </section>
+
+      <!-- =================================================
+         CALCULATOR
+    ================================================== -->
+
+      <section class="calculator-card">
+        <div class="calculator-heading">
+          <span class="calculator-number"> 01 </span>
+
+          <div>
+            <h2>Datos del átomo</h2>
+
+            <p>Introduce los valores para comenzar.</p>
+          </div>
+        </div>
+
+        <form action="/calcular_quimica" method="POST">
+          <div class="input-grid">
+            <!-- PROTONES -->
+
+            <div class="input-group">
+              <label for="protones">
+                <i class="fa-solid fa-circle-dot"></i>
+                Protones
+              </label>
+
+              <p class="input-description">
+                Determinan el número atómico del elemento.
+              </p>
+
+              <input
+                type="number"
+                id="protones"
+                name="protones"
+                min="1"
+                required
+                placeholder="Ej. 13"
+              />
+            </div>
+
+            <!-- NEUTRONES -->
+
+            <div class="input-group">
+              <label for="neutrones">
+                <i class="fa-solid fa-circle"></i>
+                Neutrones
+              </label>
+
+              <p class="input-description">
+                Se suman a los protones para obtener la masa.
+              </p>
+
+              <input
+                type="number"
+                id="neutrones"
+                name="neutrones"
+                min="0"
+                required
+                placeholder="Ej. 14"
+              />
+            </div>
+          </div>
+
+          <button type="submit" class="calculate-button">
+            Calcular
+
+            <i class="fa-solid fa-arrow-right"></i>
+          </button>
+        </form>
+
+        <!-- ERROR -->
+
+        {% if error %}
+
+        <div class="calculator-error">
+          <i class="fa-solid fa-circle-exclamation"></i>
+
+          {{ error }}
+        </div>
+
+        {% endif %}
+      </section>
+
+      <!-- =================================================
+         RESULTS
+    ================================================== -->
+
+      {% if resultado %}
+
+      <section class="results-section">
+        <div class="section-heading">
+          <span class="section-tag"> 02 · RESULTADOS </span>
+
+          <h2>Estructura del átomo</h2>
+
+          <p>
+            Estos son los resultados obtenidos a partir de los datos
+            introducidos.
+          </p>
+        </div>
+
+        <!-- ELEMENT -->
+
+        <div class="element-result">
+          <span class="result-label"> ELEMENTO </span>
+
+          <h3>{{ resultado.nombre }}</h3>
+
+          <span class="element-symbol"> {{ resultado.simbolo }} </span>
+        </div>
+
+        <!-- BASIC DATA -->
+
+        <div class="result-grid">
+          <div class="result-card">
+            <span> Protones </span>
+
+            <strong> {{ resultado.protones }} </strong>
+          </div>
+
+          <div class="result-card">
+            <span> Neutrones </span>
+
+            <strong> {{ resultado.neutrones }} </strong>
+          </div>
+
+          <div class="result-card">
+            <span> Electrones </span>
+
+            <strong> {{ resultado.electrones }} </strong>
+          </div>
+
+          <div class="result-card">
+            <span> Número atómico (Z) </span>
+
+            <strong> {{ resultado.z }} </strong>
+          </div>
+
+          <div class="result-card">
+            <span> Número de masa (A) </span>
+
+            <strong> {{ resultado.a }} </strong>
+          </div>
+        </div>
+
+        <!-- =================================================
+             BOHR DISTRIBUTION
+        ================================================== -->
+
+        <div class="bohr-result">
+          <div class="bohr-heading">
+            <span class="section-tag"> MODELO DE BOHR </span>
+
+            <h2>Distribución electrónica</h2>
+
+            <p>
+              Los electrones se distribuyen en diferentes niveles de energía
+              alrededor del núcleo.
+            </p>
+          </div>
+
+          <div class="bohr-levels">
+            <div class="bohr-level">
+              <span class="level-name"> K </span>
+
+              <strong> {{ resultado.bohr[0] }} </strong>
+
+              <small> electrones </small>
+            </div>
+
+            <div class="bohr-level">
+              <span class="level-name"> L </span>
+
+              <strong> {{ resultado.bohr[1] }} </strong>
+
+              <small> electrones </small>
+            </div>
+
+            <div class="bohr-level">
+              <span class="level-name"> M </span>
+
+              <strong> {{ resultado.bohr[2] }} </strong>
+
+              <small> electrones </small>
+            </div>
+
+            <div class="bohr-level">
+              <span class="level-name"> N </span>
+
+              <strong> {{ resultado.bohr[3] }} </strong>
+
+              <small> electrones </small>
+            </div>
+          </div>
+
+          <div class="bohr-summary">
+            <span> Distribución: </span>
+
+            <strong> {{ resultado.bohr | join(' · ') }} </strong>
+          </div>
+        </div>
+      </section>
+
+      {% endif %}
+
+      <!-- =================================================
+         EXPLANATION
+    ================================================== -->
+
+      <section class="calculator-note">
+        <i class="fa-solid fa-atom"></i>
+
+        <div>
+          <h3>¿Cómo funciona?</h3>
+
+          <p>
+            En un átomo neutro, el número de electrones es igual al número de
+            protones. El número atómico corresponde a los protones, mientras que
+            el número de masa se obtiene sumando protones y neutrones.
+          </p>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

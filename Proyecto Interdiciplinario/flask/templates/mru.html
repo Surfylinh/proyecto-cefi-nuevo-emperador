@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora MRU | CEFI Nuevo Emperador</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Poppins:wght@400;500;600;700&family=Red+Hat+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='mru.css') }}">
+</head>
+
+<body>
+  <main class="calculator-page">
+        <section class="calculator-hero">
+        <span class="section-tag">HERRAMIENTA INTERACTIVA</span>
+        <h1>Calculadora de MRU</h1>
+        <p>Movimiento Rectilíneo Uniforme</p>
+        </section>
+        
+        <section class="calculator-card">
+        <div class="card-heading">
+            <span class="number">01</span>
+         <div>
+               <h2>Datos del movimiento</h2>
+                <p>Introduce los valores que quieres utilizar para realizar la simulación.</p>
+            </div>
+        </div>
+
+
+        {% if error %}
+
+            <div class="error-message">{{ error }}</div>
+
+        {% endif %}
+
+
+        <form action="/calcular_mru" method="POST">
+
+        <div class="input-group">
+
+        <label for="x0">
+            Posición inicial
+            <span>(m)</span>
+        </label>
+
+        <input
+            type="number"
+            id="x0"
+            name="x0"
+            step="any"
+            placeholder="Ej. 0"
+            required
+        >
+
+        </div>
+
+
+        <div class="input-group">
+
+            <label for="v">
+                Velocidad
+                <span>(m/s)</span>
+            </label>
+
+                <input
+                    type="number"
+                    id="v"
+                    name="v"
+                    step="any"
+                    placeholder="Ej. 10"
+                    required
+                >
+
+        </div>
+
+
+        <div class="input-group">
+            <label for="t">
+                Tiempo máximo
+                <span>(s)</span>
+            </label>
+
+            <input
+                type="number"
+                id="t"
+                name="t"
+                step="any"
+                min="0"
+                placeholder="Ej. 10"
+                required
+            >
+
+        </div>
+
+        <div class="formula-preview">
+                <span>FÓRMULA</span>
+                <strong>x(t) = x₀ + v · t</strong>
+        </div>  
+
+        
+            <button type="submit" class="calculate-button">
+                Calcular y graficar
+                <span>→</span>
+            </button>
+
+        </form>
+
+        </section>
+
+               
+        {% if graph %}
+
+        <section class="result-card">
+            <div class="card-heading">
+                 <span class="number">02</span>
+                <div>
+                    <h2>Gráfica del movimiento</h2>
+                    <p>Posición respecto al tiempo.</p>
+                </div>
+
+            </div>
+
+            <div class="graph-container">
+                    <img
+                        src="{{ url_for('static', filename='mru_graph.png') }}"
+                        alt="Gráfica de posición respecto al tiempo"
+                    >
+            </div>
+        </section>
+
+        {% endif %}
+
+        <!-- RESULTS -->
+
+        {% if resultados %}
+
+        <section class="result-card">
+        <div class="card-heading">
+            <span class="number">03</span>
+
+            <div>
+                <h2>Resultados</h2>
+                <p>Estos son algunos de los valores calculados para el movimiento.</p>
+            </div>
+        </div>
+
+        <div class="results-grid">
+                {% for resultado in resultados %}
+
+                    <div class="result-item">
+
+                    <span>t = {{ resultado.tiempo }} s</span>
+
+                    <strong>x = {{ resultado.posicion }} m</strong>
+
+                    </div>
+
+                {% endfor %}
+
+        </div>
+
+
+        </section>
+
+        {% endif %}
+   
+    </main>
+</body>
+
+</html>

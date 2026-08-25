@@ -1,0 +1,1353 @@
+/* =========================================================
+GLOBAL RESET
+========================================================= */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* =========================================================
+TYPOGRAPHY & BODY
+========================================================= */
+
+h1,
+h2,
+h3 {
+  font-family: "Montserrat", sans-serif;
+}
+
+body,
+nav,
+p {
+  font-family: "Poppins", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background-color: #f5eedd;
+}
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+header#encabezado {
+    background: #16587b;
+    color: #f5eedd;
+    border-bottom: 5px solid #d4af37;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    width: 100%;
+    min-height: 120px;
+
+    padding: 15px 50px;
+
+    position: relative;
+    z-index: 1000;
+}
+
+#logo-container {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+#logo-container h1 {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.2;
+    margin: 0;
+}
+
+#escudo {
+    width: 80px;
+    height: auto;
+}
+
+.title-top {
+    font-size: 1.15rem;
+    font-weight: 600;
+}
+
+.title-bottom {
+    font-size: 1.8rem;
+    font-weight: 700;
+}
+
+#encabezado nav ul {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+    margin: 0;
+    padding: 0;
+}
+
+#encabezado nav a {
+    color: #f5eedd;
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+#encabezado nav a:hover {
+    color: #d4af37;
+}
+
+/* =========================================================
+SCROLL ANIMATIONS
+========================================================= */
+
+.hidden {
+  opacity: 0;
+  transform: translateY(60px);
+
+  transition:
+    opacity 0.8s ease,
+    transform 0.8s ease;
+}
+
+.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* =========================================================
+GENERAL ICONS
+========================================================= */
+
+.icon {
+  font-size: 2.8rem;
+  color: #16587b;
+  margin-bottom: 20px;
+}
+
+.highlight i {
+  font-size: 1.7rem;
+  color: #16587b;
+  width: 35px;
+}
+
+.contact-item i {
+  color: #16587b;
+  margin-right: 10px;
+  font-size: 1.1rem;
+}
+
+.footer-column i {
+  width: 25px;
+  color: #d4af37;
+}
+
+/* =========================================================
+PHYSICS HERO
+========================================================= */
+
+.physics-hero {
+  position: relative;
+
+  width: 100%;
+  height: 500px;
+
+  overflow: hidden;
+}
+
+.physics-hero img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+  display: block;
+}
+
+.physics-hero::after {
+  content: "";
+
+  position: absolute;
+  inset: 0;
+
+  background: rgba(0, 0, 0, 0.25);
+}
+
+.physics-hero-overlay {
+  position: absolute;
+
+  z-index: 2;
+
+  top: 50%;
+  left: 50%;
+
+  transform: translate(-50%, -50%);
+
+  width: 90%;
+  max-width: 850px;
+
+  text-align: center;
+
+  color: #ffffff;
+}
+
+.physics-hero-overlay span {
+  color: hsl(192, 58%, 55%);
+
+  font-size: 1rem;
+  font-weight: 600;
+
+  letter-spacing: 4px;
+}
+
+.physics-hero-overlay h1 {
+  color: #ffffff;
+
+  font-size: 4rem;
+
+  margin: 15px 0 20px;
+}
+
+.physics-hero-overlay p {
+  color: #f5eedd;
+
+  font-size: 1.2rem;
+  line-height: 1.7;
+
+  max-width: 650px;
+
+  margin: 0 auto;
+}
+
+/* =========================================================
+GENERAL PHYSICS SECTIONS
+========================================================= */
+
+.physics-section,
+.physics-topic {
+  width: 90%;
+  max-width: 1100px;
+
+  margin: 100px auto;
+}
+
+.section-heading {
+  text-align: center;
+
+  max-width: 800px;
+
+  margin: 0 auto 45px;
+}
+
+.section-tag {
+  display: inline-block;
+
+  color: #48b3ce;
+
+  font-size: 0.8rem;
+  font-weight: 700;
+
+  letter-spacing: 3px;
+
+  margin-bottom: 10px;
+}
+
+.section-heading h2 {
+  color: #16587b;
+
+  font-size: clamp(2rem, 4vw, 3rem);
+
+  line-height: 1.25;
+
+  margin-bottom: 15px;
+}
+
+.section-heading p {
+  color: #666;
+
+  font-size: 1.1rem;
+}
+
+/* =========================================================
+PHYSICS INTRODUCTION
+========================================================= */
+
+.physics-introduction {
+  width: 90%;
+  max-width: 1100px;
+
+  margin: 90px auto;
+}
+
+.section-title {
+  text-align: center;
+
+  max-width: 750px;
+
+  margin: 0 auto 45px;
+}
+
+.section-title span {
+  color: #48b3ce;
+
+  font-size: 14px;
+  font-weight: bold;
+
+  letter-spacing: 3px;
+}
+
+.section-title h2 {
+  color: #16587b;
+
+  font-size: clamp(2rem, 4vw, 3rem);
+
+  margin: 10px 0 15px;
+}
+
+.section-title p {
+  color: #666;
+
+  font-size: 17px;
+}
+
+/* Introduction text */
+
+.intro-text {
+  background: #ffffff;
+
+  padding: 30px 40px;
+
+  border-radius: 15px;
+
+  margin-bottom: 35px;
+
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.06);
+}
+
+.intro-text p {
+  text-align: center;
+
+  margin: 0;
+
+  font-size: 17px;
+  line-height: 1.8;
+}
+
+/* =========================================================
+CONCEPT CARDS
+========================================================= */
+
+.concept-cards {
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 25px;
+
+  margin-bottom: 45px;
+}
+
+.concept-card {
+  background: #ffffff;
+
+  padding: 35px 30px;
+
+  border-radius: 18px;
+
+  text-align: center;
+
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+
+  border-top: 4px solid #48b3ce;
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.concept-card:hover {
+  transform: translateY(-7px);
+
+  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.12);
+}
+
+.concept-icon {
+  width: 60px;
+  height: 60px;
+
+  margin: 0 auto 20px;
+
+  border-radius: 50%;
+
+  background: #f5eedd;
+  color: #16587b;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 25px;
+}
+
+.concept-card h3 {
+  color: #16587b;
+
+  font-size: 22px;
+
+  margin-bottom: 12px;
+}
+
+.concept-card p {
+  color: #555;
+
+  line-height: 1.6;
+
+  margin: 0;
+}
+
+/* =========================================================
+MOVEMENT SUMMARY
+========================================================= */
+
+.movement-summary {
+  background: #16587b;
+
+  color: #ffffff;
+
+  padding: 40px;
+
+  border-radius: 20px;
+
+  text-align: center;
+}
+
+.movement-summary h3 {
+  font-size: 26px;
+
+  margin-bottom: 10px;
+
+  color: #f5eedd;
+}
+
+.movement-summary > p {
+  max-width: 700px;
+
+  margin: 0 auto 30px;
+
+  color: #f5eedd;
+}
+
+.movement-cards {
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 18px;
+}
+
+.movement-card {
+  background: #ffffff;
+  color: #333;
+
+  padding: 20px;
+
+  border-radius: 12px;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 5px;
+
+  transition: 0.3s;
+}
+
+.movement-card:hover {
+  transform: translateY(-4px);
+}
+
+.movement-card strong {
+  color: #16587b;
+
+  font-family: "Red Hat Mono", monospace;
+
+  font-size: 20px;
+}
+
+.movement-card span {
+  font-size: 14px;
+
+  color: #555;
+}
+
+/* =========================================================
+SIGNS & UNITS
+========================================================= */
+
+.signs-section {
+  width: 90%;
+  max-width: 1100px;
+
+  margin: 100px auto;
+}
+
+.signs-grid {
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  gap: 30px;
+}
+
+.signs-card {
+  background: #ffffff;
+
+  padding: 35px;
+
+  border-radius: 20px;
+
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.07);
+
+  border: 1px solid #eeeeee;
+
+  transition: 0.3s ease;
+}
+
+.signs-card:hover {
+  transform: translateY(-5px);
+
+  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* Signs card header */
+
+.signs-card-header {
+  display: flex;
+  align-items: center;
+
+  gap: 18px;
+
+  margin-bottom: 25px;
+}
+
+.signs-card-header span {
+  color: #48b3ce;
+
+  font-size: 12px;
+  font-weight: bold;
+
+  letter-spacing: 2px;
+}
+
+.signs-card-header h3 {
+  color: #16587b;
+
+  font-size: 24px;
+
+  margin-top: 2px;
+}
+
+/* Signs icon */
+
+.signs-icon {
+  width: 60px;
+  height: 60px;
+
+  flex-shrink: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 15px;
+
+  background: #f5eedd;
+  color: #16587b;
+
+  font-size: 24px;
+}
+
+/* Unit list */
+
+.unit-list {
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  gap: 12px;
+
+  margin-top: 25px;
+}
+
+.unit-item {
+  background: #f8fafb;
+
+  padding: 18px;
+
+  border-radius: 12px;
+
+  display: flex;
+  flex-direction: column;
+
+  border-left: 4px solid #48b3ce;
+}
+
+.unit-item strong {
+  color: #16587b;
+
+  font-family: "Red Hat Mono", monospace;
+
+  font-size: 20px;
+}
+
+.unit-item span {
+  color: #444;
+
+  font-size: 14px;
+}
+
+.unit-item small {
+  color: #888;
+
+  margin-top: 3px;
+}
+
+/* Direction examples */
+
+.direction-example {
+  display: flex;
+  flex-direction: column;
+
+  gap: 12px;
+
+  margin-top: 25px;
+}
+
+.direction {
+  display: flex;
+  align-items: center;
+
+  gap: 15px;
+
+  padding: 15px 18px;
+
+  border-radius: 12px;
+
+  background: #f8fafb;
+}
+
+.direction i {
+  font-size: 22px;
+
+  width: 30px;
+
+  text-align: center;
+}
+
+.direction div {
+  display: flex;
+  flex-direction: column;
+}
+
+.direction strong {
+  color: #16587b;
+}
+
+.direction span {
+  font-size: 13px;
+
+  color: #666;
+}
+
+.positive i {
+  color: #48b3ce;
+}
+
+.negative i {
+  color: #16587b;
+}
+
+/* Sign note */
+
+.sign-note {
+  display: flex;
+  align-items: flex-start;
+
+  gap: 12px;
+
+  margin-top: 20px;
+
+  padding: 15px;
+
+  background: #f5eedd;
+
+  border-radius: 12px;
+}
+
+.sign-note i {
+  color: #d4af37;
+
+  margin-top: 4px;
+}
+
+.sign-note p {
+  margin: 0;
+
+  font-size: 14px;
+
+  color: #555;
+}
+
+/* Physics rule */
+
+.physics-rule {
+  margin-top: 30px;
+
+  padding: 25px 30px;
+
+  background: #16587b;
+  color: #ffffff;
+
+  border-radius: 16px;
+
+  display: flex;
+  align-items: center;
+
+  gap: 20px;
+}
+
+.rule-icon {
+  width: 50px;
+  height: 50px;
+
+  flex-shrink: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #f5eedd;
+  color: #16587b;
+
+  border-radius: 50%;
+
+  font-size: 20px;
+}
+
+.physics-rule span {
+  color: #48b3ce;
+
+  font-size: 12px;
+  font-weight: bold;
+
+  letter-spacing: 2px;
+}
+
+.physics-rule p {
+  margin: 3px 0 0;
+
+  color: #f5eedd;
+}
+
+/* =========================================================
+PHYSICS CALCULATOR
+========================================================= */
+
+.physics-calculator-section {
+  max-width: 1100px;
+
+  margin: 70px auto;
+
+  padding: 60px;
+
+  background-color: #16587b;
+
+  border-radius: 25px;
+
+  text-align: center;
+
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+.calculator-intro {
+  max-width: 750px;
+
+  margin: 0 auto;
+}
+
+.physics-calculator-section .section-tag {
+  display: inline-block;
+
+  color: #f5eedd;
+
+  font-size: 0.85rem;
+  font-weight: 700;
+
+  letter-spacing: 2px;
+
+  margin-bottom: 12px;
+}
+
+.physics-calculator-section h2 {
+  color: #ffffff;
+
+  font-family: "Montserrat", sans-serif;
+
+  font-size: 2.4rem;
+
+  margin-bottom: 18px;
+}
+
+.physics-calculator-section p {
+  color: #f5eedd;
+
+  line-height: 1.7;
+
+  font-size: 1.05rem;
+
+  margin-bottom: 30px;
+}
+
+.calculator-grid {
+  display: grid;
+
+  grid-template-columns: repeat(2, 1fr);
+
+  gap: 25px;
+
+  margin-top: 40px;
+}
+
+.calculator-option {
+  background-color: #ffffff;
+
+  padding: 30px;
+
+  border-radius: 18px;
+
+  text-align: left;
+}
+
+.calculator-number {
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  width: 42px;
+  height: 42px;
+
+  margin-bottom: 18px;
+
+  background-color: #16587b;
+  color: #f5eedd;
+
+  border-radius: 10px;
+
+  font-family: "Red Hat Mono", monospace;
+
+  font-weight: 700;
+}
+
+.calculator-option h3 {
+  color: #003366;
+
+  font-family: "Montserrat", sans-serif;
+
+  font-size: 1.35rem;
+
+  margin: 0 0 12px;
+}
+
+.calculator-option p {
+  color: #666;
+
+  font-size: 0.95rem;
+
+  line-height: 1.6;
+
+  margin-bottom: 25px;
+}
+
+/* Calculator button */
+
+.calculator-button {
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 12px;
+
+  padding: 14px 25px;
+
+  background-color: #f5eedd;
+  color: #003366;
+
+  text-decoration: none;
+
+  font-weight: 700;
+
+  border-radius: 12px;
+
+  transition: 0.3s;
+}
+
+.calculator-button span {
+  font-size: 1.2rem;
+
+  transition: 0.3s;
+}
+
+.calculator-button:hover {
+  background-color: #d4af37;
+
+  color: #ffffff;
+
+  transform: translateY(-3px);
+}
+
+.calculator-button:hover span {
+  transform: translateX(4px);
+}
+
+/* Center the 3rd option card in the grid */
+.calculator-grid > .calculator-option:last-child {
+  grid-column: 1 / -1;
+  justify-self: center;
+  max-width: 500px; /* Prevents the centered card from stretching super wide */
+  width: 100%;
+}
+
+/* =========================================================
+PHYSICS TOPIC CARDS
+========================================================= */
+
+.physics-topic {
+  background: #ffffff;
+
+  padding: 50px;
+
+  margin: 45px auto;
+
+  max-width: 1100px;
+
+  border-radius: 25px;
+
+  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.07);
+
+  border-top: 5px solid #16587b;
+}
+
+/* Topic header */
+
+.physics-topic .section-heading {
+  margin-bottom: 35px;
+}
+
+.physics-topic .section-tag {
+  display: inline-block;
+
+  color: #16587b;
+
+  font-size: 0.85rem;
+  font-weight: 700;
+
+  letter-spacing: 2px;
+
+  margin-bottom: 8px;
+}
+
+.physics-topic .section-heading h2 {
+  color: #003366;
+
+  font-size: 2.6rem;
+
+  margin: 0;
+}
+
+.physics-topic .section-heading p {
+  color: #666;
+
+  font-size: 1.15rem;
+
+  margin-top: 5px;
+}
+
+/* Topic image */
+
+.physics-topic .img-tema {
+  display: block;
+
+  width: 100%;
+  max-width: 800px;
+  max-height: 450px;
+
+  object-fit: contain;
+
+  margin: 0 auto 35px;
+
+  border-radius: 18px;
+
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+}
+
+/* Topic text */
+
+.physics-topic > p {
+  color: #444;
+
+  font-size: 1.05rem;
+
+  line-height: 1.8;
+
+  margin: 18px 0;
+}
+
+/* Variable list */
+
+.physics-topic ul {
+  padding-left: 25px;
+
+  margin: 20px 0 30px;
+}
+
+.physics-topic li {
+  color: #444;
+
+  font-size: 1rem;
+
+  line-height: 1.7;
+
+  margin-bottom: 10px;
+}
+
+.physics-topic li b {
+  color: #003366;
+}
+
+/* =========================================================
+FORMULAS
+========================================================= */
+
+.formula {
+  background: #16587b;
+  color: #f5eedd;
+
+  font-family: "Red Hat Mono", monospace;
+
+  font-size: 1.3rem;
+  font-weight: 600;
+
+  text-align: center;
+
+  padding: 25px;
+
+  margin: 30px 0;
+
+  border-radius: 15px;
+
+  box-shadow: 0 8px 20px rgba(22, 88, 123, 0.2);
+}
+
+/* =========================================================
+EXAMPLES
+========================================================= */
+
+.ejemplo {
+  background: #f5eedd;
+
+  border-left: 5px solid #d4af37;
+
+  padding: 20px 25px;
+
+  margin: 20px 0;
+
+  border-radius: 0 12px 12px 0;
+
+  color: #444;
+
+  line-height: 1.7;
+}
+
+/* =========================================================
+GRAPH SECTIONS
+========================================================= */
+
+.graph-topic {
+  background: #f8fafb;
+
+  padding: 30px;
+
+  margin: 25px 0;
+
+  border-radius: 15px;
+
+  border: 1px solid #e5e5e5;
+}
+
+.graph-topic h3 {
+  color: #16587b;
+
+  font-size: 1.35rem;
+
+  margin-bottom: 15px;
+}
+
+/* =========================================================
+TABLES
+========================================================= */
+
+.table-container {
+  width: 100%;
+
+  overflow-x: auto;
+
+  border-radius: 15px;
+
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.07);
+}
+
+table {
+  width: 100%;
+
+  border-collapse: collapse;
+
+  background: #ffffff;
+}
+
+th {
+  background: #16587b;
+  color: #f5eedd;
+
+  padding: 17px;
+
+  text-align: left;
+
+  font-family: "Red Hat Mono", monospace;
+}
+
+td {
+  padding: 15px 17px;
+
+  border-bottom: 1px solid #e5e5e5;
+}
+
+tbody tr:nth-child(even) {
+  background: #f5eedd;
+}
+
+tbody tr {
+  transition: 0.2s;
+}
+
+tbody tr:hover {
+  background: #e8f5f8;
+}
+
+/* =========================================================
+COMMON MISTAKES
+========================================================= */
+
+.common-mistakes {
+  list-style: none;
+
+  padding: 0 !important;
+
+  display: grid;
+
+  gap: 18px;
+}
+
+.common-mistakes li {
+  background: #ffffff;
+
+  padding: 25px 30px;
+
+  border-radius: 15px;
+
+  border-left: 5px solid #48b3ce;
+
+  box-shadow: 0 7px 20px rgba(0, 0, 0, 0.06);
+}
+
+/* =========================================================
+GLOSSARY
+========================================================= */
+
+#glosario table td:first-child {
+  font-weight: 700;
+
+  color: #16587b;
+
+  white-space: nowrap;
+}
+
+/* =========================================================
+FOOTER
+========================================================= */
+
+.footer {
+  background: #16587b;
+
+  color: #f5eedd;
+
+  border-top: 5px solid #d4af37;
+}
+
+.footer-container {
+  width: 90%;
+  max-width: 1300px;
+
+  margin: auto;
+
+  padding: 60px 0;
+
+  display: grid;
+
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+
+  gap: 50px;
+}
+
+.footer-column h3 {
+  margin-bottom: 20px;
+
+  color: #ffffff;
+}
+
+.footer-column p {
+  line-height: 1.8;
+
+  margin-bottom: 10px;
+}
+
+.footer-column ul {
+  list-style: none;
+}
+
+.footer-column ul li {
+  margin-bottom: 12px;
+}
+
+.footer-column a {
+  color: #f5eedd;
+
+  text-decoration: none;
+
+  transition: 0.3s;
+}
+
+.footer-column a:hover {
+  color: #48b3ce;
+}
+
+.footer-logo {
+  width: 80px;
+
+  margin-bottom: 20px;
+}
+
+.footer-motto {
+  margin-top: 20px;
+
+  font-style: italic;
+}
+
+.footer-bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+
+  text-align: center;
+
+  padding: 20px;
+
+  font-size: 0.9rem;
+}
+
+/* =========================================================
+RESPONSIVE DESIGN
+========================================================= */
+
+/* ---------- 800px and below ---------- */
+
+@media (max-width: 800px) {
+  .concept-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .movement-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .signs-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ---------- 700px and below ---------- */
+
+@media (max-width: 700px) {
+  .calculator-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ---------- 500px and below ---------- */
+
+@media (max-width: 500px) {
+  .physics-introduction {
+    width: 92%;
+
+    margin: 65px auto;
+  }
+
+  .intro-text {
+    padding: 25px;
+  }
+
+  .concept-card {
+    padding: 30px 25px;
+  }
+
+  .movement-summary {
+    padding: 30px 20px;
+  }
+
+  .signs-section {
+    width: 92%;
+
+    margin: 70px auto;
+  }
+
+  .signs-card {
+    padding: 25px;
+  }
+
+  .unit-list {
+    grid-template-columns: 1fr;
+  }
+
+  .physics-rule {
+    align-items: flex-start;
+
+    padding: 22px;
+  }
+}
+
+/* ---------- 900px and below ---------- */
+
+@media (max-width: 900px) {
+  .footer-container {
+    grid-template-columns: 1fr;
+
+    text-align: center;
+  }
+
+  .footer-logo {
+    display: block;
+
+    margin: 0 auto 20px;
+  }
+}
